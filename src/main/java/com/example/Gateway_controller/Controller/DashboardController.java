@@ -1,5 +1,6 @@
-package com.example.Gateway_controller;
+package com.example.Gateway_controller.Controller;
 
+import com.example.Gateway_controller.dto.DashboardMetrics;
 import org.springframework.data.redis.core.ReactiveStringRedisTemplate;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;

@@ -14,7 +14,7 @@
 	</parent>
 
 	<groupId>com.example</groupId>
-	<artifactId>gatekeeper-api</artifactId>
+	<artifactId>WindowMesh</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>GateKeeper API</name>
 

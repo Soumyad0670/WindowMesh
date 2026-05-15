@@ -1,5 +1,6 @@
-package com.example.Gateway_controller;
+package com.example.Gateway_controller.Policy;
 
+import com.example.Gateway_controller.Config.RateLimitConfig;
 import org.springframework.stereotype.Service;
 
 @Service

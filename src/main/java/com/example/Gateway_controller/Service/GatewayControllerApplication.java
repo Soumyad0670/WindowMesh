@@ -1,4 +1,4 @@
-package com.example.Gateway_controller;
+package com.example.Gateway_controller.Service;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

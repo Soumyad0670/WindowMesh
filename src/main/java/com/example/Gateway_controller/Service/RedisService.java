@@ -1,12 +1,10 @@
-package com.example.Gateway_controller;
+package com.example.Gateway_controller.Service;
 
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.data.redis.core.ReactiveStringRedisTemplate;
 import org.springframework.data.redis.core.script.RedisScript;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Mono;
-
-import java.util.List;
 
 @Service
 public class RedisService {

@@ -3,7 +3,7 @@ package com.example.Gateway_controller.Filter;
 import com.example.Gateway_controller.Config.RateLimitConfig;
 import com.example.Gateway_controller.Service.MetricsService;
 import com.example.Gateway_controller.Policy.RateLimitPolicyService;
-import com.example.Gateway_controller.RedisService;
+import com.example.Gateway_controller.Service.RedisService;
 import org.springframework.cloud.gateway.filter.GatewayFilter;
 import org.springframework.cloud.gateway.filter.GatewayFilterChain;
 import org.springframework.http.HttpStatus;

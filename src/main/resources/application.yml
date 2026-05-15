@@ -1,0 +1,61 @@
+server:
+  port: 8080
+
+spring:
+
+  main:
+    web-application-type: reactive
+
+  data:
+    redis:
+      host: localhost
+      port: 6379
+
+  cloud:
+    gateway:
+      routes:
+
+        # ---------------------------------
+        # TEST ROUTE
+        # ---------------------------------
+
+        - id: test-route
+          uri: https://httpbin.org
+          predicates:
+            - Path=/test/**
+
+        # ---------------------------------
+        # LOGIN ROUTE
+        # ---------------------------------
+
+        - id: login-service
+          uri: https://httpbin.org
+          predicates:
+            - Path=/login/**
+
+          filters:
+            - RewritePath=/login/(?<segment>.*), /${segment}
+
+        # ---------------------------------
+        # SEARCH ROUTE
+        # ---------------------------------
+
+        - id: search-service
+          uri: https://httpbin.org
+          predicates:
+            - Path=/search/**
+
+        # ---------------------------------
+        # ADMIN ROUTE
+        # ---------------------------------
+
+        - id: admin-service
+          uri: https://httpbin.org
+          predicates:
+            - Path=/admin/**
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: gateway
